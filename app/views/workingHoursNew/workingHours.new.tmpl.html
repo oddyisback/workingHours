@@ -1,0 +1,26 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2"
+            md-component-id="left" md-is-open="vm.sidenavOpen">
+    <md-toolbar>
+        <h1 class="md-toolbar-tools">Add working hours</h1>
+    </md-toolbar>
+    <md-content>
+        <form >
+            <h4>Start Date</h4>
+            <div layout="row">
+                <mdp-date-picker mdp-placeholder="Date" ng-model="workingHour.dateTimeStart"></mdp-date-picker>
+                <mdp-time-picker ng-model="workingHour.dateTimeStart"></mdp-time-picker>
+            </div>
+
+            <h4>End Date</h4>
+            <div layout="row">
+                <mdp-date-picker mdp-placeholder="Date" ng-model="workingHour.dateTimeEnd"></mdp-date-picker>
+                <mdp-time-picker ng-model="workingHour.dateTimeEnd"></mdp-time-picker>
+            </div>
+
+            <md-button class="md-primary" ng-click="vm.saveWorkingHour(workingHour)">Save</md-button>
+            <md-button ng-click="vm.closeSidebar()" class="md-primary">Cancel</md-button>
+
+            <pre>{{workingHour | json}}</pre>
+        </form>
+    </md-content>
+</md-sidenav>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Manage your working hours</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/Icons8-Windows-8-Finance-Money-Bag.ico">
+
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="lib/angular-material/angular-material.css">
+  <link rel="stylesheet" href="lib/mdi/css/materialdesignicons.css">
+  <link rel="stylesheet" href="lib/angular-material-datetimepicker/css/material-datetimepicker.css">
+  <link rel="stylesheet" href="lib/angular-material-data-table/dist/md-data-table.css">
+  <link rel="stylesheet" href="lib/mdPickers/dist/mdPickers.css">
+
+  <link rel="stylesheet" href="app.css">
+  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-app="myApp">
+  <ul class="menu">
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
+    <li><a href="#/workingHours">Working Hours</a></li>
+  </ul>
+
+  <section ui-view></section>
+
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="lib/angular-animate/angular-animate.js"></script>
+  <script src="lib/angular-aria/angular-aria.js"></script>
+  <script src="lib/angular-material/angular-material.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="lib/momentjs/moment.js"></script>
+  <script src="lib/angular-material-datetimepicker/js/angular-material-datetimepicker.js"></script>
+  <script src="lib/firebase/firebase.js"></script>
+  <script src="lib/angularfire/dist/angularfire.js"></script>
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/angular-smart-table/dist/smart-table.js"></script>
+  <script src="lib/angular-material-data-table/dist/md-data-table.js"></script>
+  <script src="lib/mdPickers/dist/mdPickers.js"></script>
+
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="views/workingHours/workingHours.ctrl.js"></script>
+  <script src="views/workingHours/workingHours.fac.js"></script>
+  <script src="views/workingHoursNew/workingHours.new.ctrl.js"></script>
+  <script src="views/workingHoursEdit/workingHours.edit.ctrl.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+</body>
+</html>

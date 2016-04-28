@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/alert" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/av" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/communication" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/content" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/device" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/editor" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/file" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/hardware" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/iconfont" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/image" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/maps" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/navigation" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/notification" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/places" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/social" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/sprites" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/toggle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/lib/material-design-icons/www" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

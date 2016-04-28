@@ -1,0 +1,51 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <p class="material-icons">face</p>
+        <p><strong>Working Hours</strong></p>
+
+        <md-button ng-click="vm.openSideBar()">
+            <md-icon class="material-icons">check_box</md-icon>
+            Insert a working date
+        </md-button>
+    </div>
+</md-toolbar>
+
+<ui-view></ui-view>
+
+<md-table-container>
+    <table md-table multiple ng-model="selected">
+        <thead md-head md-order="query.order">
+            <tr md-row>
+                <th md-column></th>
+                <th md-column md-order-by="nameToLower"><span>Start date</span></th>
+                <th md-column md-numeric md-order-by="calories.value"><span>End date</span></th>
+                <th md-column md-numeric>Working hours</th>
+                <th md-column md-numeric>Payment</th>
+                <th md-column md-numeric>Action</th>
+            </tr>
+        </thead>
+        <tbody md-body>
+            <tr md-row ng-repeat="workingHour in vm.workingHours">
+                <td md-cell><i class="material-icons">date_range</i></td>
+                <td md-cell>{{workingHour.dateTimeStart | date:'dd/MM/yyyy HH:mm'}}</td>
+                <td md-cell>{{workingHour.dateTimeEnd | date:'dd/MM/yyyy HH:mm'}}</td>
+                <td md-cell>{{workingHour.diffTime}}</td>
+                <td md-cell>{{(workingHour.payment | number:2) + ' €'}}</td>
+                <td md-cell>
+                    <button ng-click="vm.editWorkingHour(workingHour)" class="material-icons">edit</button>
+                    <button ng-click="vm.deleteWorkingHour(workingHour)" class="material-icons">delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td md-cell></td>
+                <td md-cell></td>
+                <td md-cell></td>
+                <td md-cell colspan="2">Total: {{(vm.totalSum() | number:2) + ' €'}}</td>
+                <td md-cell></td>
+                <td md-cell></td>
+            </tr>
+        </tbody>
+    </table>
+</md-table-container>
+
+<md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination>
