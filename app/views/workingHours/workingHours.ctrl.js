@@ -72,10 +72,22 @@
 
             $scope.selected = [];
 
-            $scope.query = {
-                order: 'name',
-                limit: 5,
-                page: 1
+            vm.query = {
+                order: 'dateTimeStart',
+                limit: 15,
+                page: 1,
+                limitOptions: [5, 10, 15]
+            };
+
+            vm.options = {
+                rowSelection: true,
+                multiSelect: true,
+                autoSelect: true,
+                decapitate: false,
+                largeEditDialog: false,
+                boundaryLinks: false,
+                limitSelect: true,
+                pageSelect: true
             };
         })
         .config(function($mdThemingProvider) {
