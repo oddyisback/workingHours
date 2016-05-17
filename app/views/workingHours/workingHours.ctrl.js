@@ -70,8 +70,6 @@
                 )
             }
 
-            $scope.selected = [];
-
             vm.query = {
                 order: 'dateTimeStart',
                 limit: 15,
