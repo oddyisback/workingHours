@@ -5,7 +5,7 @@
     "use strict";
     angular
         .module('myApp')
-        .controller('WorkingHoursCtr', function($scope, $state, workingHoursFactory, $mdToast, $mdDialog){
+        .controller('WorkingHoursCtr', function($scope, $state, workingHoursFactory, $mdToast, sortingAlgorithms){
             var vm = this;
 
             vm.workingHours = workingHoursFactory.ref;
@@ -17,8 +17,17 @@
                 }
                 return total;
             };
-            vm.workingHours.$loaded().then(function(workingHours){
-                console.log(workingHours);
+
+
+
+            vm.workingHours.$loaded().then(function(){
+                vm.workingHours.sort(sortingAlgorithms.factory.sortByDateDecr);
+                //console.log(vm.workingHours);
+            });
+
+            vm.workingHours.$watch(function(event){
+                vm.workingHours.sort(sortingAlgorithms.factory.sortByDateAsc);
+                //console.log(event);
             });
 
             vm.deleteWorkingHour = function (workingHour){

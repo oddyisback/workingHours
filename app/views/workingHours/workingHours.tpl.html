@@ -18,7 +18,7 @@
             <tr md-row>
                 <th md-column></th>
                 <th md-column md-order-by="nameToLower"><span>Start date</span></th>
-                <th md-column md-numeric md-order-by="vm.query.order"><span>End date</span></th>
+                <th md-column md-numeric ><span>End date</span></th>
                 <th md-column md-numeric>Working hours</th>
                 <th md-column md-numeric>Payment</th>
                 <th md-column md-numeric>Action</th>
@@ -26,7 +26,7 @@
         </thead>
         <tbody md-body>
             <tr md-row ng-repeat="workingHour in vm.workingHours
-                | orderBy: vm.query.order | limitTo: vm.query.limit : (vm.query.page -1) * vm.query.limit"
+                | limitTo: vm.query.limit : (vm.query.page -1) * vm.query.limit"
                 md-auto-select="vm.options.autoSelect">
                 <td md-cell><i class="material-icons">date_range</i></td>
                 <td md-cell>{{workingHour.dateTimeStart | date:'dd/MM/yyyy HH:mm'}}</td>
